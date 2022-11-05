@@ -14,8 +14,37 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
 
     </head>
-    <body>
+    <body background="background.png">
+        <center>
+            <div>
+            <h3 class="heading btn btn-warning">AI PING PONG GAME</h3>
+            <Button class="intructions_button"  data-toggle="modal" data-target="#myModal">Instructions</Button>
+        </div>
+        <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button>
+        <br><br>
+        <h3 id="status" class="btn btn-warning"></h3>
+        <br><br>
+        <div id="canvas"></div>
+        <div id="game_console"></div>
+        <button onclick="restart()" class="restart_button"></button>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4>Instructions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2>1.you paddle is the red paddle
+                            2.to move the paddle use your right wrist </h2>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+
+        </center>
+    
         <script src="main.js"></script>
     </body>
 </html>

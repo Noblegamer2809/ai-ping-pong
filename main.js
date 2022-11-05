@@ -12,6 +12,7 @@ var paddle1Y;
 var  playerscore =0;
 var audio1;
 var pcscore =0;
+
 //ball x and y and speedx speed y and radius
 var ball = {
     x:350/2,
@@ -23,12 +24,18 @@ var ball = {
 
 function setup(){
   var canvas =  createCanvas(700,600);
+  video = createCapture(VIDEO);
+  canvas.parent('canvas');
+  
+  video.size(700, 600);
+  video.hide();
 }
 
 
 function draw(){
 
  background(0); 
+ image(video, 0, 0, 700, 600);
 
  fill("black");
  stroke("black");
@@ -69,7 +76,7 @@ function draw(){
 
 
 
-//function reset when ball does notcame in the contact of padde
+//function reset when ball does not come in the contact of padde
 function reset(){
    ball.x = width/2+100,
    ball.y = height/2+100;

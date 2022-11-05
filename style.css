@@ -2,3 +2,8 @@ body
 {
 
 }
+
+.modal-dialog
+{
+    width: 90%;
+}
